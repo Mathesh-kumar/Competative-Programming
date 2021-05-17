@@ -1,6 +1,6 @@
 # Find factors of a given number.
 
-## Programming logic
+## Programming Logic
 
     for(int i=1; (i*i)<=n; i++)
     {
