@@ -12,9 +12,8 @@ Write a program to Generate a random 10 digit no? (No digits should repeat).
 using namespace std;
 
 
-int randomNumber()
+long long randomNumber()
 {
-    int result = 0;
     char output[11];
 
     while(true)
@@ -33,10 +32,8 @@ int randomNumber()
             output[2] = arr2[1];
             output[3] = '\0';
             int temp1 = atoi(output);
-            if(temp1%3 == 0 && (output[0]!=output[1]!=output[2]))
+            if(temp1%3 == 0 && (output[0]!=output[1]) && (output[1]!=output[2]) && (output[0]!=output[3]))
             {
-                cout<<output;
-
                 for(int i=0, j=3; i<9; i++)
                 {
                     char* end = output + sizeof(output) / sizeof(output[0]);            
@@ -49,19 +46,17 @@ int randomNumber()
                         j = j+1;
                     }
                 }
-                //output[9] = '0';
+                output[9] = '0';
                 output[10] = '\0';
                 break;
             }
         }
     }
-    cout<<"\n";
-    cout<<stoll(output);
-    return result;
+    return stoll(output);
 }
 
 int main()
 {
-    cout<<randomNumber();
+    cout<<randomNumber()<<"\n";
     return 0;
 }
