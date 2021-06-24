@@ -21,7 +21,7 @@ long long randomNumber()
         srand(unsigned(time(0)));
         char arr1[] = {'2','4','6','8'};
         random_shuffle(&arr1[0], &arr1[3]);
-        char arr2[] = {'1','2','3','4','5','6','7','8','9', '0', '\0'};
+        char arr2[] = {'1','2','3','4','5','6','7','8','9','0','\0'};
         random_shuffle(&arr2[0], &arr2[8]);
 
         output[0] = arr2[0];
