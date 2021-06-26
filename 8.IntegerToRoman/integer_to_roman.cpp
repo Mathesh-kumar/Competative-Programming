@@ -38,8 +38,10 @@ string intToRoman(int temp)
 
     while(temp>=1)
     {
-        int i;
-        for(i=0; i<13; i++)
+        int i=0;
+        if(temp<90)
+            i=6;
+        for(; i<13; i++)
             if(temp>=value[i])
                 break;
 
