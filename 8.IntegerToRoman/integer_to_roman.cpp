@@ -1,39 +1,11 @@
 #include<iostream>
 using namespace std;
 
-string intEqual(int n)
-{
-    if(n==1) 
-        return "I";
-    else if(n==4)
-        return "IV";
-    else if(n==5)
-        return "V";
-    else if(n==9)
-        return "IX";
-    else if(n==10)
-        return "X";
-    else if(n==40)
-        return "XL";
-    else if(n==50)
-        return "L";
-    else if(n==90) 
-        return "XC";
-    else if(n==100) 
-        return "C";
-    else if(n==400) 
-        return "CD";
-    else if(n==500) 
-        return "D";
-    else if(n==900) 
-        return "CM";
-    else 
-        return "M";
-}
-
 string intToRoman(int temp)
 {
-    int value[13] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}; 
+    int intValue[13] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+    string romanValue[13] = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+
     string result = "";
 
     while(temp>=1)
@@ -42,11 +14,11 @@ string intToRoman(int temp)
         if(temp<90)
             i=6;
         for(; i<13; i++)
-            if(temp>=value[i])
+            if(temp>=intValue[i])
                 break;
 
-        temp-=value[i];
-        result+=intEqual(value[i]);
+        temp-=intValue[i];
+        result+=romanValue[i];
     }
 
     return result;
