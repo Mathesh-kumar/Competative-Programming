@@ -1,0 +1,28 @@
+Assume a two dimensional string array. Each array contains child and father details. 
+'0'th element is the child and '1'st is the parent. 
+Write a program to accept a name and find the number of children and grand children he has. 
+Don't use any brute force methods. 
+Assume names are unique.
+
+Example:
+
+Data:
+[
+	[Surya, Sivakumar],
+	[Karthi, Sivakumar],
+	[Sivakumar, Rakkaiya],
+	[Dev, Surya],
+	[Umayaal, Karthi],
+	[Diya, Surya],
+	[Prabu, Sivaji],
+	[Vikram, Prabu]
+]
+
+Input: Surya, 1		// 1 indicates the number of children Surya has
+Output: 2
+
+Input: Karthi, 1
+Output: 1
+
+Input: Sivakumar, 2		// 2 indicates the number of grandchildren Sivakumar has
+Output: 3
